@@ -16,26 +16,78 @@
             padding-top: 20%;
         }
         .container {
+            position: relative;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 50px;
             border-radius: 10px;
             display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+
+        h1, p {
             font-size: 2em;
-            margin-bottom: 20px;
+            color: rgba(121, 63, 187, 0.8); /* This sets the text color to purple */
         }
+        h2 {
+            font-size: 3em;
+            color: rgba(107, 40, 183, 0.8); /* This sets the text color to purple */
+        }
+
         p {
             font-size: 1.2em;
             margin: 10px 0;
+        }
+
+        /* Ribbons */
+        .ribbon-image {
+            position: absolute;
+            width: 150px; /* Adjust to the size of your GIF */
+            height: auto;
+        }
+        .ribbon-image.left {
+            top: -40px;
+            left: -70px;
+            animation: rotateLeftRibbon 1s infinite alternate ease-in-out;
+        }
+        .ribbon-image.right {
+            top: -40px;
+            right: -70px;
+            animation: rotateRightRibbon 1s infinite alternate ease-in-out;
+        }
+
+        /* Keyframes for left ribbon */
+        @keyframes rotateLeftRibbon {
+            0% {
+                transform: rotate(-38deg);
+            }
+            100% {
+                transform: rotate(-52deg);
+            }
+        }
+
+        /* Keyframes for right ribbon */
+        @keyframes rotateRightRibbon {
+            0% {
+                transform: rotate(38deg);
+            }
+            100% {
+                transform: rotate(52deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Dog Name: Bella</h1>
-        <p>Address: 1234 Dog Street, New York, NY 10001</p>
-        <p>Phone: (123) 456-7890</p>
+        <!-- Replace polygon ribbons with GIF images -->
+        <img src="ribbon.gif" class="ribbon-image left" alt="Left Ribbon">
+        <img src="ribbon.gif" class="ribbon-image right" alt="Right Ribbon">
+
+        <!-- Text content -->
+        <h1>Hola, Mi Nombre Es</h1>
+        <h2>Mabel</h2>
+        <p>Tecalitlan Jal.</p>
+        <p>Calle Morelos #187</p>
+        <p>Telefono: (341) 420-1479</p>
     </div>
 </body>
 </html>
