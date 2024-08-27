@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informacion De Mabelita</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
         body {
             background-image: url('background.jpg');
             background-size: cover;
@@ -13,45 +19,52 @@
             font-family: Arial, sans-serif;
             color: #333;
             text-align: center;
-            padding-top: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
         .container {
             position: relative;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 50px;
+            padding: 30px; /* Reduced padding */
             border-radius: 10px;
             display: inline-block;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: scale(0.9); /* Slightly smaller overall scaling */
         }
 
         h1, p {
-            font-size: 2em;
-            color: rgba(121, 63, 187, 0.8); /* This sets the text color to purple */
+            font-size: 1.8em; /* Reduced font size */
+            color: rgba(121, 63, 187, 0.8);
         }
+
         h2 {
-            font-size: 3em;
-            color: rgba(107, 40, 183, 0.8); /* This sets the text color to purple */
+            font-size: 2.5em; /* Reduced font size */
+            color: rgba(107, 40, 183, 0.8);
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1em; /* Reduced font size */
             margin: 10px 0;
         }
 
         /* Ribbons */
         .ribbon-image {
             position: absolute;
-            width: 150px; /* Adjust to the size of your GIF */
+            width: 120px; /* Adjusted size */
             height: auto;
         }
+
         .ribbon-image.left {
-            top: -40px;
-            left: -70px;
+            top: -30px;
+            left: -60px;
             animation: rotateLeftRibbon 1s infinite alternate ease-in-out;
         }
+
         .ribbon-image.right {
-            top: -40px;
-            right: -70px;
+            top: -30px;
+            right: -60px;
             animation: rotateRightRibbon 1s infinite alternate ease-in-out;
         }
 
@@ -78,11 +91,9 @@
 </head>
 <body>
     <div class="container">
-        <!-- Replace polygon ribbons with GIF images -->
         <img src="ribbon.gif" class="ribbon-image left" alt="Left Ribbon">
         <img src="ribbon.gif" class="ribbon-image right" alt="Right Ribbon">
 
-        <!-- Text content -->
         <h1>Hola, Mi Nombre Es</h1>
         <h2>Mabel</h2>
         <p>Tecalitlan Jal.</p>
